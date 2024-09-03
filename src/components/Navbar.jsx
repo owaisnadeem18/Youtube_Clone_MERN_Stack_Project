@@ -10,7 +10,7 @@ import Avatar from "react-avatar";
 
 const Navbar = () => {
   return (
-    <div className="parent-navbar-div flex justify-between px-3 py-2">
+    <div className="parent-navbar-div flex justify-between px-8 py-2 sticky top-0 bg-white ">
       <div className="flex gap-2 items-center ">
         <RxHamburgerMenu className="text-xl cursor-pointer" />
         <img src={YoutubeLogo} className="w-28 cursor-pointer" alt="" />
