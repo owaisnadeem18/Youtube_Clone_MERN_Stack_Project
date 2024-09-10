@@ -14,6 +14,11 @@ import MusicIcon from "../../src/assets/Music.svg";
 import GamingIcon from "../../src/assets/Gaming.svg";
 import NewsIcon from "../../src/assets/News.svg";
 import SportsIcon from "../../src/assets/Sports.svg";
+import PremiumYoutube from "../../src/assets/YoutubePremium.svg";
+import PremiumKids from "../../src/assets/YTKids.svg";
+import PremiumMusic from "../../src/assets/YTPremiumMusic.svg";
+import PremiumStudio from "../../src/assets/YTStudio.svg";
+
 import "../App.css";
 
 export default function Sidebar() {
@@ -96,10 +101,33 @@ export default function Sidebar() {
     },
   ];
 
+  const slideBarElements4 = [
+    {
+      id: 1,
+      name: "Youtube Premium",
+      icon: PremiumYoutube,
+    },
+    {
+      id: 2,
+      name: "Youtube Studio",
+      icon: PremiumStudio,
+    },
+    {
+      id: 3,
+      name: "Youtube Music",
+      icon: PremiumMusic,
+    },
+    {
+      id: 4,
+      name: "Youtube Kids",
+      icon: PremiumKids,
+    },
+  ];
+
   return (
     <>
-      <div className="px-6 py-2  ">
-        <div className="flex flex-col w-[13%]  custom-scrollbar overflow-y-scroll overflow-x-hidden h-[calc(100vh - 6.625rem)]">
+      <div className="px-6 py-2">
+        <div className="flex flex-col w-[13%] custom-scrollbar overflow-y-scroll overflow-x-hidden h-[calc(100vh - 6.625rem)] ">
           {slideBarElements.map((item) => (
             <div
               key={item.id}
@@ -131,7 +159,7 @@ export default function Sidebar() {
 
           {/* Explore section of the website */}
 
-          <div className="mt-4 mb-4 px-2">
+          <div className="mt-4 mb-4 px-2 font-[600]">
             <h1>Explore</h1>
           </div>
 
@@ -146,6 +174,45 @@ export default function Sidebar() {
           ))}
           <div className="mt-4"></div>
           <hr />
+
+          <div className="mt-4 mb-4 px-2 font-[600] ">
+            <h1>More From Youtube </h1>
+          </div>
+
+          {slideBarElements4.map((item) => (
+            <div
+              key={item.id}
+              className="flex items-center gap-3 cursor-pointer hover:bg-gray-200 rounded-xl p-2"
+            >
+              <img
+                src={item.icon}
+                alt="Home Icon"
+                className="cursor-pointer  w-6"
+              />
+              <span className="cursor-pointer">{item.name}</span>
+            </div>
+          ))}
+          <div className="mt-4"></div>
+          <hr />
+
+          <div className="mt-4"></div>
+
+          <div className="text-[16px] text-gray-600 ">
+            <span>
+              About Press Copyright Contact us Creators Advertise Developers
+            </span>
+            <div className="mt-4"></div>
+            <p className="">
+              <span>Terms {""} </span>
+              <span>Privacy {""}</span>
+              <span>Policy & Safety {""}</span>
+              <span>How YouTube works {""}</span>
+              <span>Test new features</span>
+            </p>
+
+            <div className="mt-4"></div>
+            <p>© {new Date().getFullYear()} Owais Nadeem's Youtube Clone</p>
+          </div>
         </div>
       </div>
     </>
