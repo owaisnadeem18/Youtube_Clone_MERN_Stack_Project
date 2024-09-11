@@ -126,8 +126,8 @@ export default function Sidebar() {
 
   return (
     <>
-      <div className="px-6 py-2">
-        <div className="flex flex-col w-[13%] custom-scrollbar overflow-y-scroll overflow-x-hidden h-[calc(100vh - 6.625rem)] ">
+      <div className="px-6 py-2 w-[15%]">
+        <div className="flex flex-col w-[100%] custom-scrollbar overflow-y-scroll overflow-x-hidden h-[calc(100vh - 6.625rem)] ">
           {slideBarElements.map((item) => (
             <div
               key={item.id}
@@ -197,7 +197,7 @@ export default function Sidebar() {
 
           <div className="mt-4"></div>
 
-          <div className="text-[16px] text-gray-600 ">
+          <div className="text-[15.3px] text-gray-600 px-2">
             <span>
               About Press Copyright Contact us Creators Advertise Developers
             </span>

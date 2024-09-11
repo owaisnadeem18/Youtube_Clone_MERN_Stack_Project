@@ -1,4 +1,6 @@
-const API_Key = import.meta.env.Youtube_API_Key;
+import axios from "axios";
+
+const API_Key = import.meta.env.VITE_YOUTUBE_API_KEY;
 
 const BaseURL = "https://youtube138.p.rapidapi.com";
 
@@ -14,6 +16,6 @@ export const FetchData = async (url) => {
     const { data } = await axios.get(`${BaseURL}/${url}`, options);
     return data;
   } catch (err) {
-    console.log("Error fetching data");
+    console.log("Error fetching data", err);
   }
 };
