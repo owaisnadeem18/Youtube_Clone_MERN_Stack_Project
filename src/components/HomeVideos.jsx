@@ -7,9 +7,9 @@ export default function HomeVideos({ video }) {
     <div>
       <Link to={`/video/${video?.videoId}`}>
         <div className="">
-          <div className="relative h-48 md:h-56 md: rounded-xl overflow-hidden hover:rounded-none duration-200 ">
+          <div className="relative  overflow-hidden md:rounded-xl hover:rounded-none duration-200 ">
             <img
-              className="h-full w-full"
+              className="w-full"
               src={`${video?.thumbnails[0].url}`}
               alt=""
             />

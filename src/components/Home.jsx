@@ -10,17 +10,19 @@ export default function Home() {
   console.log(Data);
 
   return (
-    <div className="flex">
+    <div className="w-[100%] flex mt-16">
       <Sidebar />
-      <div className=" ">
-        {Data.map(
-          (item) =>
-            // Only show videos on my home screen , when the type is video:
+      <div className=" px-10 py-6 mt-3   h-[calc(100vh-79.46px)] custom-scrollbar overflow-y-scroll overflow-x-hidden ">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-5 ">
+          {Data.map(
+            (item) =>
+              // Only show videos on my home screen , when the type is video:
 
-            item.type == "video" && (
-              <HomeVideos key={item.id} video={item?.video} />
-            )
-        )}
+              item.type == "video" && (
+                <HomeVideos key={item.id} video={item?.video} />
+              )
+          )}
+        </div>
       </div>
     </div>
   );

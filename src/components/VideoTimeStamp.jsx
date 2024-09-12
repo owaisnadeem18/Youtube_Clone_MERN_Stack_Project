@@ -16,7 +16,7 @@ export default function VideoTimeStamp({ time }) {
       : `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
 
   return (
-    <div className="absolute bottom-2 text-base rounded-md font-semibold px-2 py-1 right-2 bg-black text-white">
+    <div className="absolute bottom-3 text-base rounded-md font-semibold px-2 py-1 right-2 bg-black text-white">
       {videoTime}
     </div>
   );

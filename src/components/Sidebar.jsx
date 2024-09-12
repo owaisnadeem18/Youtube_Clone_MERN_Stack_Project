@@ -126,8 +126,8 @@ export default function Sidebar() {
 
   return (
     <>
-      <div className="px-6 py-2 w-[15%]">
-        <div className="flex flex-col w-[100%] custom-scrollbar overflow-y-scroll overflow-x-hidden h-[calc(100vh - 6.625rem)] ">
+      <div className="px-6 w-[18%] h-[calc(100vh-79.46px)] custom-scrollbar overflow-y-scroll overflow-x-hidden ">
+        <div className="">
           {slideBarElements.map((item) => (
             <div
               key={item.id}
