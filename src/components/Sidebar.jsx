@@ -126,32 +126,32 @@ export default function Sidebar() {
 
   return (
     <>
-      <div className="px-6 w-[18%] h-[calc(100vh-79.46px)] custom-scrollbar overflow-y-scroll overflow-x-hidden ">
+      <div className="px-6 w-[25%] h-[calc(100vh-79.46px)] custom-scrollbar overflow-y-scroll overflow-x-hidden">
         <div className="">
           {slideBarElements.map((item) => (
             <div
               key={item.id}
-              className="flex items-center gap-3 cursor-pointer hover:bg-gray-200 rounded-xl p-2"
+              className="flex items-center gap-6 cursor-pointer hover:bg-gray-200 rounded-xl p-2"
             >
               <img src={item.icon} alt="Home Icon" className="cursor-pointer" />
-              <span className="cursor-pointer">{item.name}</span>
+              <span className="cursor-pointer text-[.8rem]">{item.name}</span>
             </div>
           ))}
           <div className="mt-4"></div>
           <hr />
 
           <div className="mt-4 mb-4 flex items-center gap-2 px-2">
-            <h1 className="font-semibold">You</h1>
+            <h1 className="font-semibold text-[.8rem]">You</h1>
             <img src={YouIcon} alt="" />
           </div>
 
           {slideBarElements2.map((item) => (
             <div
               key={item.id}
-              className="flex items-center gap-3 cursor-pointer hover:bg-gray-200 rounded-xl p-2"
+              className="flex items-center gap-6 cursor-pointer hover:bg-gray-200 rounded-xl p-2"
             >
               <img src={item.icon} alt="Home Icon" className="cursor-pointer" />
-              <span className="cursor-pointer">{item.name}</span>
+              <span className="cursor-pointer text-[.8rem]">{item.name}</span>
             </div>
           ))}
           <div className="mt-4"></div>
@@ -166,30 +166,30 @@ export default function Sidebar() {
           {slideBarElements3.map((item) => (
             <div
               key={item.id}
-              className="flex items-center gap-3 cursor-pointer hover:bg-gray-200 rounded-xl p-2"
+              className="flex items-center gap-6 cursor-pointer hover:bg-gray-200 rounded-xl p-2"
             >
               <img src={item.icon} alt="Home Icon" className="cursor-pointer" />
-              <span className="cursor-pointer">{item.name}</span>
+              <span className="cursor-pointer text-[.8rem]">{item.name}</span>
             </div>
           ))}
           <div className="mt-4"></div>
           <hr />
 
-          <div className="mt-4 mb-4 px-2 font-[600] ">
+          <div className="mt-4 mb-4 px-2 font-[600]  text-[.8rem]">
             <h1>More From Youtube </h1>
           </div>
 
           {slideBarElements4.map((item) => (
             <div
               key={item.id}
-              className="flex items-center gap-3 cursor-pointer hover:bg-gray-200 rounded-xl p-2"
+              className="flex items-center gap-6 cursor-pointer hover:bg-gray-200 rounded-xl p-2"
             >
               <img
                 src={item.icon}
                 alt="Home Icon"
-                className="cursor-pointer  w-6"
+                className="cursor-pointer w-6"
               />
-              <span className="cursor-pointer">{item.name}</span>
+              <span className="cursor-pointer text-[.83rem]">{item.name}</span>
             </div>
           ))}
           <div className="mt-4"></div>
@@ -197,7 +197,7 @@ export default function Sidebar() {
 
           <div className="mt-4"></div>
 
-          <div className="text-[15.3px] text-gray-600 px-2">
+          <div className="text-[.83rem] text-gray-600 px-2">
             <span>
               About Press Copyright Contact us Creators Advertise Developers
             </span>

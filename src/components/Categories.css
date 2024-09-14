@@ -1,0 +1,53 @@
+/* Global Scrollbar Styles for visible scrollbar */
+.custom-scrollbar {
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  position: relative;
+}
+
+/* Hide the scrollbar by default */
+.hide-scroll-bar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+.hide-scroll-bar::-webkit-scrollbar {
+  opacity: 0; /* Initially hide scrollbar */
+  transition: opacity 0.3s ease; /* Smooth transition for Webkit browsers */
+}
+
+/* Show the custom scrollbar on hover */
+.hide-scroll-bar:hover {
+  -ms-overflow-style: auto; /* IE and Edge */
+  scrollbar-width: thin; /* Firefox */
+}
+
+.hide-scroll-bar:hover::-webkit-scrollbar {
+  opacity: 1; /* Show scrollbar smoothly on hover */
+}
+
+.hide-scroll-bar:hover::-webkit-scrollbar {
+  height: 8px; /* Adjust the height of the scrollbar */
+}
+
+.hide-scroll-bar:hover::-webkit-scrollbar-track {
+  background: #f5f5f5; /* Scrollbar track color */
+}
+
+.hide-scroll-bar:hover::-webkit-scrollbar-thumb {
+  background-color: #888; /* Scrollbar thumb color */
+  border-radius: 10px;
+  border: 1px solid #f5f5f5; /* Thumb border */
+}
+
+.hide-scroll-bar:hover::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Thumb color on hover */
+}
+
+/* Scrollbar styling for Firefox */
+.hide-scroll-bar:hover {
+  scrollbar-color: #888 #f5f5f5; /* Thumb and track color */
+  scrollbar-width: thin; /* Scrollbar width */
+  padding-bottom: 0.8rem;
+}

@@ -16,10 +16,10 @@ const Navbar = () => {
         <img src={YoutubeLogo} className="w-28 cursor-pointer" alt="" />
       </div>
       <div className="w-[35%] flex items-center ">
-        <div className="input-box py-2 w-[100%] flex border rounded-l-full">
+        <div className="input-box py-2 w-[100%] flex border rounded-l-full focus:border-blue-500">
           <input
             type="text"
-            className="w-[99%] ml-auto pl-3 outline-none"
+            className="w-[99%] ml-auto pl-3 outline-none focus:border-blue-500"
             placeholder="Search"
           />
         </div>
