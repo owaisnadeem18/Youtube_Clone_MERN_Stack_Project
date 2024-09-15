@@ -3,6 +3,7 @@ import Sidebar from "./Sidebar";
 import HomeVideos from "./HomeVideos";
 import { useAuth } from "../context/AuthProvider";
 import Categories from "./Categories";
+import Spinner from "./Spinner";
 
 export default function Home() {
   const { Loading, Data } = useAuth();
@@ -13,6 +14,7 @@ export default function Home() {
   return (
     <div className="w-[100%] flex mt-16">
       <Sidebar />
+      {Loading && <Spinner />}
       <div className="px-10 pb-8 mt-3 h-[calc(100vh-79.46px)] custom-scrollbar overflow-y-scroll overflow-x-hidden ">
         <Categories />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 ">

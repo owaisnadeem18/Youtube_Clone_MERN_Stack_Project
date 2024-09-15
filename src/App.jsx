@@ -4,15 +4,16 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import PlayingVideo from "./components/PlayingVideo";
 import Search from "./components/Search";
-import Loading from "./components/Loading";
+
 import { useAuth } from "./context/AuthProvider";
+import Spinner from "./components/Spinner";
 
 export default function App() {
-  const { loading } = useAuth();
+  const { Loading } = useAuth();
 
   return (
     <>
-      {loading && <Loading />}
+      {Loading && <Spinner />}
       <Navbar />
       <Routes>
         <Route path="/" exact element={<Home />} />
