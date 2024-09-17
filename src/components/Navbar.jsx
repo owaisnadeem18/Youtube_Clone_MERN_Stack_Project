@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import YoutubeLogo from "../../public/images/youtube-navbar-logo.png";
 import { CiSearch } from "react-icons/ci";
@@ -7,8 +7,23 @@ import { RiVideoAddLine } from "react-icons/ri";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import profilePic from "../../public/images/profile-pic.jpg";
 import Avatar from "react-avatar";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  // const [searchQuery, setSearchQuery] = useState("");
+
+  // const navigate = useNavigate();
+
+  // const searchQueryHandler = (event) => {
+  //   if (
+  //     (event?.key === "Enter" || event === "searchButton") &&
+  //     searchQuery?.length > 0
+  //   ) {
+  //     navigate(`/search/${searchQuery}`);
+  //     setSearchQuery("");
+  //   }
+  // };
+
   return (
     <div className="parent-navbar-div flex justify-between px-8 py-2 fixed top-0 bg-white z-50 w-[100%]">
       <div className="flex gap-2 items-center ">
@@ -21,6 +36,7 @@ const Navbar = () => {
             type="text"
             className="w-[99%] ml-auto pl-3 outline-none focus:border-blue-500"
             placeholder="Search"
+            // onChange={(e) => searchQueryHandler(e.target.value)}
           />
         </div>
         <button className="border rounded-r-full py-2 px-4 bg-gray-100 ">

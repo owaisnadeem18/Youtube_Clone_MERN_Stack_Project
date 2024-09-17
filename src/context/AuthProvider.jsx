@@ -13,10 +13,10 @@ export default function AuthProvider({ children }) {
   }, [value]);
 
   const FetchAllData = (query) => {
-    SetLoading(true);
+    // SetLoading(true);
     FetchData(`search/?q=${query}`).then(({ contents }) => {
       SetData(contents);
-      SetLoading(false);
+      // SetLoading(false);
     });
   };
 
